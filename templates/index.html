@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+    <title>Blog</title>
+{% endblock head %}
+
+{% block top %}
+<h2>Create a New Blog Post:</h2>
+<form action='/posts' method='POST'>
+    Title: <input type="text" name="title" id="title">
+<br>
+    Content: <input type="text" name="content" id="content">
+<br>
+    Author: <input type="text" name="author" id="author">
+<br>
+<input type="submit" value="Post" class="btn btn-primary">
+</form>
+<h1>All Posts</h1>
+{% endblock top %}
+
+{% block body %}
+    
+    {% for post in posts %}
+    <div class="col-md-4 col-lg-4 ">								
+        <div class="textbox">
+            <div class="textbox__image"><a href="#"><img src="https://picsum.photos/200/200" alt=""/></a></div>
+            <div class="textbox__body">
+                <h2 class="textbox__title"><a href="#">{{ post.title }}</a></h2>
+                {% if post.author %}
+                    <h3 class="textbox__title"> Author: {{ post.author }}</h3>
+                {% else %}
+                    <h3 class="textbox__title">Author: Unknown</h3>
+                {% endif %}
+                <div class="textbox__description">{{ post.content }}</div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+        
+{% endblock body %}
+    

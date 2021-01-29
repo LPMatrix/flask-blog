@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Fonts-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/fontawesome/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/themify-icons/themify-icons.css')}}">
+    <!-- Vendors-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendors/bootstrap4/bootstrap-grid.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendors/magnific-popup/magnific-popup.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendors/owl.carousel/owl.carousel.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendors/jquery/jquery.min.css')}}">
+    <!-- App & fonts-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&amp;amp;subset=latin-ext">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block head %}
+        
+    {% endblock head %}
+        
+</head>
+<body>
+    <div class="page-wrap">
+        <header class="header header__style-02">
+            <div class="container">
+                <div class="header__logo"><a href="/"></a></div>
+                <div class="header__toogleGroup">
+                
+            </div>
+        </header>
+
+        <div class="md-content">
+            <div class="slider">
+                <div class="carousel__element owl-carousel" data-options='{"items":1,"loop":true,"dots":false,"nav":false,"margin":0, "autoplay": true, "autoplayTimeout": 3000}'>
+                    <div class="slider__item" style="background-image: url('https://picsum.photos/1920/1080');">
+                        <div class="md-tb">
+                            <div class="md-tb__cell">
+                                <div class="slider__content">
+                                    <div class="container">
+                                        <h1>Blog</h1>
+                                        <h2>A blog built with python flask</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item" style="background-image: url('https://picsum.photos/1920/1080');">
+                        <div class="md-tb">
+                            <div class="md-tb__cell">
+                                <div class="slider__content">
+                                    <div class="container">
+                                        <h1>Blog</h1>
+                                        <h2>A blog built with python flask</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section -->
+				<section class="md-section" style="background-color:#f7f7f7;padding:0;">
+					<div class="container">
+						<div class="textbox-group">
+							<div class="row">
+								<div class="col-md-4 col-lg-4 ">
+									
+									<!-- textbox -->
+									<div class="textbox">
+										<div class="textbox__image"><a href="#"><img src="assets/img/services/4.jpg" alt=""/></a></div>
+										<div class="textbox__body">
+											<h2 class="textbox__title"><a href="#">Easy setup</a></h2>
+											<div class="textbox__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet ut lacus a tincidunt. Quisque lu</div>
+										</div>
+									</div><!-- End / textbox -->
+									
+								</div>
+								<div class="col-md-4 col-lg-4 ">
+									
+									<!-- textbox -->
+									<div class="textbox">
+										<div class="textbox__image"><a href="#"><img src="assets/img/services/5.jpg" alt=""/></a></div>
+										<div class="textbox__body">
+											<h2 class="textbox__title"><a href="#">Responsive Layout</a></h2>
+											<div class="textbox__description">Nam elit ligula, egestas et ornare non, viverra eu justo. Aliquam ornare lectus ut pharetra dictum. </div>
+										</div>
+									</div><!-- End / textbox -->
+									
+								</div>
+								<div class="col-md-4 col-lg-4 ">
+									
+									<!-- textbox -->
+									<div class="textbox">
+										<div class="textbox__image"><a href="#"><img src="assets/img/services/6.jpg" alt=""/></a></div>
+										<div class="textbox__body">
+											<h2 class="textbox__title"><a href="#">SEO Optimized</a></h2>
+											<div class="textbox__description">Mauris lacinia venenatis dolor sit amet viverra. Integer malesuada nulla neque. Sed rutrum ligula eu</div>
+										</div>
+									</div><!-- End / textbox -->
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+                <!-- End / Section -->
+                <div class="container">
+                    {% block top %}
+
+                    {% endblock top %}
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        {% block body %}
+                            
+                        {% endblock body %}
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='vendors/jquery/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='vendors/imagesloaded/imagesloaded.pkgd.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='vendors/masonry-layout/masonry.pkgd.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='vendors/jquery.matchHeight/jquery.matchHeight.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='vendors/owl.carousel/owl.carousel.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='vendors/jquery.waypoints/jquery.waypoints.min.js') }}"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='vendors/menu/menu.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='vendors/smoothscroll/SmoothScroll.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
